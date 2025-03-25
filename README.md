@@ -57,3 +57,13 @@ Your Tasks:
  Limitations
 This application does not save tasks after exiting, as it operates in-memory.
 No input validation beyond basic options (numbers 1-4).
+
+
+
+
+
+some new features added to your To-Do List application:
+✅ Mark tasks as completed
+✅ Edit tasks
+✅ Save tasks to a file
+✅ Load tasks from a file
