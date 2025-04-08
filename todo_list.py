@@ -20,7 +20,8 @@ def show_menu():
     print("3. Remove a task")
     print("4. Mark a task as completed")
     print("5. Edit a task")
-    print("6. Exit")
+    print("6. Search tasks")
+    print("7. Exit")
 
 def view_tasks():
     if not tasks:
@@ -32,7 +33,8 @@ def view_tasks():
 
 def add_task():
     task = input("Enter a new task: ")
-    tasks.append(task)
+    priority = input("Set priority (High, Medium, Low): ").capitalize()
+    tasks.append(f"{task} [Priority: {priority}]")
     print("Task added successfully!")
     save_tasks()
 
@@ -68,13 +70,24 @@ def edit_task():
         task_num = int(input("Enter the task number to edit: "))
         if 0 < task_num <= len(tasks):
             new_task = input("Enter the new task description: ")
-            tasks[task_num - 1] = new_task
+            priority = input("Set priority (High, Medium, Low): ").capitalize()
+            tasks[task_num - 1] = f"{new_task} [Priority: {priority}]"
             print("Task updated successfully!")
             save_tasks()
         else:
             print("Invalid task number!")
     except ValueError:
         print("Please enter a valid number!")
+
+def search_tasks():
+    keyword = input("Enter a keyword to search: ").lower()
+    found_tasks = [task for task in tasks if keyword in task.lower()]
+    if found_tasks:
+        print("\nMatching Tasks:")
+        for i, task in enumerate(found_tasks, start=1):
+            print(f"{i}. {task}")
+    else:
+        print("No matching tasks found!")
 
 load_tasks()
 
@@ -93,6 +106,8 @@ while True:
     elif choice == '5':
         edit_task()
     elif choice == '6':
+        search_tasks()
+    elif choice == '7':
         print("Goodbye!")
         break
     else:
