@@ -70,3 +70,13 @@ some new features added to your To-Do List application:
 ✅ Edit tasks
 ✅ Save tasks to a file
 ✅ Load tasks from a file
+
+
+
+Priority Assignment:
+
+Tasks now include a priority level (High, Medium, or Low), making it easier to categorize them.
+
+Search Functionality:
+
+Allows users to search for tasks by entering a keyword, enhancing usability for longer task lists.
