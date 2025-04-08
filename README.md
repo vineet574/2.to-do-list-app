@@ -58,7 +58,10 @@ Your Tasks:
 This application does not save tasks after exiting, as it operates in-memory.
 No input validation beyond basic options (numbers 1-4).
 
+New Features:
+Set Priority for Tasks: Allows users to assign a priority level to tasks (e.g., High, Medium, Low).
 
+Search Tasks: Lets users search for tasks based on keywords.
 
 
 
